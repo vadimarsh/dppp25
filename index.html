@@ -13,43 +13,94 @@
             .card-container {
                 display: flex;
                 flex-wrap: wrap;
+                justify-content: center;
             }
 
             .card {
-                border-style: dotted;
-                margin: 10px;
-                background-color: #bbe7d0;
-                padding-left: 40px;
-                width: 400px;
+                max-width: 400px;
+            }
+
+            img {
+                float: left;
+                display: block;
+                height: 150px;
+            }
+
+        }
+
+        @media (min-width:100px) and (max-width:650px) {
+            .button {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                display: block;
             }
         }
 
-        @media (min-width:100px) and (max-width:890px) {
+        @media (min-width:100px) and (max-width:950px) {
             .card-container {
                 display: flex;
                 flex-direction: column;
             }
 
-            .card {
-                border-style: dotted;
-                margin: 10px;
-                background-color: #bbe7d0;
-                padding-left: 40px;
-
+            img {
+                display: none;
             }
+
+        }
+
+        .card {
+            border-radius: 20px;
+            border-style: dotted;
+            margin: 10px;
+            background-color: #bbe7d0;
+            padding-left: 40px;
+
         }
 
         p {
             font-family: 'Courier New', Courier, monospace;
             color: saddlebrown;
         }
+
+        .button {
+            display: inline-block;
+            border-style: solid;
+            border-color: darkorange;
+            border-radius: 10px;
+            background-color: darkorange;
+            color: white;
+            padding: 5px;
+            text-decoration: none;
+            font-size: large;
+
+        }
+
+        .header {
+            display: block;
+            background-color: rgb(211, 210, 210);
+            height: 150px;
+            text-align: center;
+
+        }
+
+        h1 {
+            display: block;
+            align-content: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: xx-large;
+            color: black;
+        }
     </style>
 </head>
 
 <body>
-    <h1 style="color:rgb(97, 225, 65)">Дополниьная программа профессиональной переподготовки</h1>
-    <a href="tel:54545345435">Связаться с руководителем</a>
-    <img src="head.jpg" alt="логитип цифровой кафедры ИРНИТУ">
+    <div class="header">
+        <img src="head.jpg" alt="логитип цифровой кафедры ИРНИТУ">
+        <h1>Дополнительная программа профессиональной переподготовки</h1>
+        <a class="button" href="tel:54545345435">Связаться с руководителем</a>
+
+    </div>
     <div class="card-container">
         <section class="card">
             <h2>Введение в веб</h2>
@@ -130,9 +181,10 @@
         </section>
         <section class="card">
             <h2>Информационная безопасность маркетолога</h2>
-            Этот модуль даст вам понимание юридических и технических норм работы с данными чтобы вы мошли выстраивать
-            маркетинговые процессы так, чтобы исключить риски многомиллионных штрафов, блокировок сайта и потери доверия
-            клиентов.
+            <p>Этот модуль даст вам понимание юридических и технических норм работы с данными чтобы вы мошли выстраивать
+                маркетинговые процессы так, чтобы исключить риски многомиллионных штрафов, блокировок сайта и потери
+                доверия
+                клиентов.</p>
             <section>
                 <h3>Ключевые темы:</h3>
                 <ul>
